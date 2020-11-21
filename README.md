@@ -25,4 +25,4 @@
 ```
 
 ### Example schedule configuration
-> click this <a href="https://www.npmjs.com/package/node-cron">redirect</a>
+> click this <a href="https://www.npmjs.com/package/node-cron" target="_blank">redirect</a>
