@@ -19,7 +19,7 @@
     "frame": {
         "times": "5", //frame length for upload to Facebook
         "duration": "30000", //upload times per frame
-        "format": ".jpg" //format frame
+        "format": ".jpg" //frame format
     }
 }
 ```
