@@ -1,0 +1,30 @@
+{
+  "name": "framebot-node.js",
+  "version": "1.0.0",
+  "description": "FrameBot for Facebook Fanpage",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "KatowProject",
+  "license": "MIT",
+  "dependencies": {
+    "fb": "^2.0.0",
+    "ffmpeg-extract-frames": "^2.0.2",
+    "fs": "0.0.1-security",
+    "get-video-duration": "^3.0.2",
+    "node-cron": "^2.0.3"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KatowProject/FrameBot-Node.js.git"
+  },
+  "keywords": [
+    "Frame"
+  ],
+  "bugs": {
+    "url": "https://github.com/KatowProject/FrameBot-Node.js/issues"
+  },
+  "homepage": "https://github.com/KatowProject/FrameBot-Node.js#readme"
+}

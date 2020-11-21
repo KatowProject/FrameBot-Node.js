@@ -1,0 +1,13 @@
+{
+    "config": {
+        "dir": "./assets/temp",
+        "video": "./assets/example.mp4",
+        "schedule": "* * * * *",
+        "token": "insert token"
+    },
+    "frame": {
+        "times": "5",
+        "duration": "30000",
+        "format": ".jpg"
+    }
+}
