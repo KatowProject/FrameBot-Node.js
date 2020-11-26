@@ -1,23 +1,20 @@
-const cron = require('node-cron');
 const fs = require('fs');
-const FrameBot = require('./bot.js');
+const cron = require('node-cron');
+const { frameBot, arrayChunk } = require('./bot.js');
 let { config, frame } = require('./config.json');
+let times = config.schedule;
 
-if (!config.dir.endsWith('/')) {
-    config.dir = config.dir + '/';
-}
+console.log('Bot akan memulai upload ' + (times.hours || 0) + ' jam ' + (times.minutes || 0) + ' menit ');
 
-cron.schedule(config.schedule, async () => {
-
-    //scan nama file dan jumlah file
+cron.schedule(`*/${times.minutes} */${times.hours} * * *`, () => {
     fs.readdir(config.dir, async (err, photo) => {
         let array = [];
         photo.forEach(a => {
             array.push(parseInt(a.replace(frame.format, '')));
         })
-        array = array.sort((a, b) => a - b);
-        console.log(`Ditemukan ${photo.length} Foto, akan mengupload 5 Foto kemudian menghapusnya! setelah itu bot akan kembali istirahat selama 30 menit`);
-        await FrameBot(array[0], array[frame.times - 1] ? array[frame.times - 1] : array[array.length]);
+        array = arrayChunk(array, frame.times);
+        console.log(`Ditemukan ${photo.length} Foto, akan mengupload ${array.length} Foto kemudian menghapusnya`);
+        await frameBot(array);
 
     });
-});
+})

@@ -11,15 +11,26 @@
 ```js
 {
     "config": {
-        "dir": "./assets/temp", //dir frames
-        "video": "./assets/example.mp4", //video
-        "schedule": "* * * * *", //scedule
-        "token": "insert token" // fb token
+        /* Frames location */
+        "dir": "./assets/temp",
+        /*Video Location*/
+        "video": "./assets/example.mp4",
+        /*shedule, empty it if not needed*/
+        "schedule": {
+            "hours": "",
+            "minutes": "",
+            "seconds": ""
+        },
+        /*FB Token*/
+        "token": "insert token"
     },
     "frame": {
-        "times": "5", //frame length for upload to Facebook
-        "duration": "30000", //upload times per frame
-        "format": ".jpg" //frame format
+        /*total frames you want to send*/
+        "times": "5",
+        /*upload times per frame*/
+        "duration": "30000",
+        /*frame format*/
+        "format": ".jpg"
     }
 }
 ```
