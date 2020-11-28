@@ -1,5 +1,6 @@
 # FrameBot-Node.js
 <img src="https://cdn.discordapp.com/attachments/496983030993518592/781482735897542666/126317587_1046185755884637_3169277377187790580_o.png">
+
 ## Instalasi
 1. Install Node.js
 2. ketik `npm install` di console
